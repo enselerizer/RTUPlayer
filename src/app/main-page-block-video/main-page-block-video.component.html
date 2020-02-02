@@ -1,0 +1,22 @@
+<div class="block" [@initLoad]="initLoad">
+  <div class="inner1">
+    <div class="inner2">
+      <div class="inner3">
+        <div class="header">
+          <span>Видео</span>
+        </div>
+        <vg-player class="players" (onPlayerReady)="onPlayerReady($event)">
+            <video class="player" [vgMedia]="media1" #media1 id="demoPlayer1" preload="auto" autoplay loop>
+                <source src="assets/video1.mp4" type="video/mp4">
+            </video>
+            <video class="player" [vgMedia]="media2" #media2 id="demoPlayer2" preload="auto" autoplay loop>
+                <source src="assets/video2.mp4" type="video/mp4">
+            </video>
+            <video class="player" [vgMedia]="media3" #media3 id="demoPlayer3" preload="auto" autoplay loop>
+                <source src="assets/video3.mp4" type="video/mp4">
+            </video>
+        </vg-player>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="block" [@initLoad]="initLoad">
+    <div class="inner1">
+      <div class="inner2">
+        <div class="inner3">
+          <div class="header"  [style.backdrop-filter]="'blur(' + blur + 'px ) brightness( ' + brightness + '% )' | safe">
+            <span>{{title}}</span>
+          </div>
+          <img src="assets/{{image}}" class="content" />
+
+        </div>
+      </div>
+    </div>
+  </div>
