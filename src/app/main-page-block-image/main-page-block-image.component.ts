@@ -6,20 +6,14 @@ import {
   animate,
   transition
 } from '@angular/animations';
+import { blockAnimations } from '../animations';
 
 @Component({
   selector: 'app-main-page-block-image',
-  inputs: ['title', 'image', 'blur', 'brightness'],
+  inputs: ['title', 'image', 'blur', 'brightness', 'link'],
   templateUrl: './main-page-block-image.component.html',
   styleUrls: ['./main-page-block-image.component.scss'],
-  animations: [
-  trigger('initLoad', [
-    transition('void => *', [
-      style({ transform: 'scale(0,0)' }),
-      animate('600ms 400ms ease', style({ transform: 'scale(1,1)' }))
-    ]),
-  ])
-  ]
+  animations: blockAnimations
 })
 export class MainPageBlockImageComponent implements OnInit {
 
@@ -27,12 +21,13 @@ export class MainPageBlockImageComponent implements OnInit {
   image: string;
   blur: number;
   brightness: number;
-  initLoad = 'hide';
+  block = 'hide';
+  link: string;
 
   constructor() { }
 
   ngOnInit() {
-    this.initLoad = 'show';
+    this.block = 'show';
   }
 
 

@@ -7,23 +7,19 @@ import {
   animate,
   transition
 } from '@angular/animations';
+import { blockAnimations } from '../animations';
 
 @Component({
   selector: 'app-main-page-block-video',
+  inputs: ['link'],
   templateUrl: './main-page-block-video.component.html',
   styleUrls: ['./main-page-block-video.component.scss'],
-  animations: [
-    trigger('initLoad', [
-      transition('void => *', [
-        style({ transform: 'scale(0,0)' }),
-        animate('800ms 400ms ease', style({ transform: 'scale(1,1)' }))
-      ]),
-    ])
-    ]
+  animations: blockAnimations
 })
 export class MainPageBlockVideoComponent implements OnInit {
 
-  initLoad = 'hide';
+  block = 'hide';
+  link: string;
 
 
   constructor() { }
@@ -35,7 +31,7 @@ export class MainPageBlockVideoComponent implements OnInit {
 
 
   ngOnInit() {
-    this.initLoad = 'show';
+    this.block = 'show';
   }
 
 }

@@ -1,0 +1,18 @@
+.blocks {
+  height: 100%;
+  width: 100%;
+  max-width: calc(16 / 9 * 100vh);
+  margin: auto;
+  transform: translateZ(0);
+}
+
+.blocks > .inner1 {
+  position: relative;
+  padding-bottom: 56.25%;
+
+}
+
+.blocks > .inner1 > .inner2 {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+}

@@ -2,4 +2,11 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: 'Etelka Text Pro';
+  user-select: none;
+}
+
+:focus {
+  outline-style: none;
+  outline-width: 0px !important;
+  outline-color: none !important;
 }

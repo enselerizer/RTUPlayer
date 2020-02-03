@@ -1,2 +1,9 @@
-<router-outlet></router-outlet>
-
+<div [@routerAnimations]="getState(routerOutlet)">
+  <div class="blocks">
+    <div class="inner1">
+      <div class="inner2">
+        <router-outlet #routerOutlet="outlet"></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

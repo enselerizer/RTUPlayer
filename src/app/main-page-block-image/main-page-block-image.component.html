@@ -1,6 +1,6 @@
-<div class="block" [@initLoad]="initLoad">
+<div class="block" [@block]="block">
     <div class="inner1">
-      <div class="inner2">
+      <div class="inner2" routerLink="{{link}}">
         <div class="inner3">
           <div class="header"  [style.backdrop-filter]="'blur(' + blur + 'px ) brightness( ' + brightness + '% )' | safe">
             <span>{{title}}</span>

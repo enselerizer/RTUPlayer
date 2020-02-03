@@ -3,14 +3,12 @@
   position: relative;
   width: calc(100%/3);
   height:100%;
-
-
-
 }
 
 .block > .inner1 {
   position: relative;
   margin: 4%;
+  padding-top: 2%
 }
 
 .inner2 {
@@ -54,7 +52,7 @@
   vertical-align:middle;
   text-align: center;
   color: #fff;
-  font-size: 70pt;
+  font-size: 10vh;
 
 }
 

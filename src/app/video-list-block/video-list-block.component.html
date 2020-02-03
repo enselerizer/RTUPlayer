@@ -1,0 +1,17 @@
+<div class="block">
+    <div class="inner1">
+      <div class="inner2">
+        <div class="inner3">
+          <div class="header">
+            <span>{{title}}</span>
+          </div>
+          <vg-player class="players" (onPlayerReady)="onPlayerReady($event)">
+              <video class="player" [vgMedia]="media1" #media1 id="demoPlayer1" preload="auto" autoplay loop>
+                  <source src="assets/{{video}}" type="video/mp4">
+              </video>
+          </vg-player>
+          <img src="assets/placeholder.png" class="content">
+        </div>
+      </div>
+    </div>
+  </div>
