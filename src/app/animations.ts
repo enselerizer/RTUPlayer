@@ -38,3 +38,24 @@ export const routerAnimations = [
     ])
   ])
 ];
+
+export const barButtonAnimations = [
+  trigger("barButtonAnimations", [
+    transition("* <=> *", [
+      query(":enter", style({ display: 'block', opacity: 0 }), { optional: true }),
+
+
+        query(
+          ":leave",
+          [animate("0.3s 100ms ease-in-out", style({ opacity: 0 }))],
+          { optional: true }
+        ),
+        query(
+          ":enter",
+          [animate("0.3s  ease-in-out", style({ opacity: 1 }))],
+          { optional: true }
+        )
+
+    ])
+  ])
+];

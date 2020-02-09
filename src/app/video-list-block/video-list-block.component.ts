@@ -18,6 +18,7 @@ export class VideoListBlockComponent implements OnInit {
   onPlayerReady(api: VgAPI) {
     api.volume = 0;
   }
+
   ngOnInit() {
   }
 

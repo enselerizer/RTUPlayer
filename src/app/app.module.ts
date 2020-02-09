@@ -15,10 +15,16 @@ import { MainPageBlockImageComponent } from './main-page-block-image/main-page-b
 import { SafePipe } from './safe.pipe';
 import { VideoListPageComponent } from './video-list-page/video-list-page.component';
 import { VideoListBlockComponent } from './video-list-block/video-list-block.component';
+import { GamePageComponent } from './game-page/game-page.component';
+import { UnityComponent } from './unity/unity.component';
+import { ControlPanelComponent } from './control-panel/control-panel.component';
+import { VideoPlayerPageComponent } from './video-player-page/video-player-page.component';
 
 const appRoutes: Routes = [
   { path: '', component: MainPageComponent, data: {state: 'main'} },
-  { path: 'video', component: VideoListPageComponent, data: {state: 'video'} }
+  { path: 'video', component: VideoListPageComponent, data: {state: 'video'} },
+  { path: 'game', component: GamePageComponent, data: {state: 'game'} },
+  { path: 'player/:video', component: VideoPlayerPageComponent, data: {state: 'player'} }
 ];
 
 
@@ -31,7 +37,11 @@ const appRoutes: Routes = [
     VideoListPageComponent,
     SafePipe,
     VideoListPageComponent,
-    VideoListBlockComponent
+    VideoListBlockComponent,
+    GamePageComponent,
+    UnityComponent,
+    ControlPanelComponent,
+    VideoPlayerPageComponent
   ],
   imports: [
     BrowserModule,
