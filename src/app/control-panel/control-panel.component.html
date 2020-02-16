@@ -1,4 +1,4 @@
 <div class="bar" [@barButtonAnimations]="getRoute()">
-  <div class="button" (click)="goBack()" *ngIf="isNotRoute('')" >НАЗАД</div>
+  <div class="button" (click)="goBack()" *ngIf="isNotRoute('main') && isNotRoute('')" >НАЗАД</div>
   <div class="button" (click)="sendUnityMessage('restart')" *ngIf="isRoute('game')" >ПЕРЕЗАПУСТИТЬ УРОВЕНЬ</div>
 </div>

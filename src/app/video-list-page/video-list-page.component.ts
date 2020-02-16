@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
+import { ArchiveService } from '../archive.service';
 
 
 @Component({
@@ -8,11 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoListPageComponent implements OnInit {
 
+  configRef: any;
 
-
-  constructor() { }
+  constructor(private archive : ArchiveService, private _elementRef: ElementRef) { }
 
   ngOnInit() {
+    this.configRef = this.archive.get();
+    this._elementRef.nativeElement.style.setProperty('--grid-size', this.configRef.videosPage.gridSize);
   }
 
 }

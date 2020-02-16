@@ -19,9 +19,12 @@ import { GamePageComponent } from './game-page/game-page.component';
 import { UnityComponent } from './unity/unity.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { VideoPlayerPageComponent } from './video-player-page/video-player-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InitialPageComponent } from './initial-page/initial-page.component';
 
 const appRoutes: Routes = [
-  { path: '', component: MainPageComponent, data: {state: 'main'} },
+  { path: '', component: InitialPageComponent, data: {state: 'initial'} },
+  { path: 'main', component: MainPageComponent, data: {state: 'main'} },
   { path: 'video', component: VideoListPageComponent, data: {state: 'video'} },
   { path: 'game', component: GamePageComponent, data: {state: 'game'} },
   { path: 'player/:video', component: VideoPlayerPageComponent, data: {state: 'player'} }
@@ -41,7 +44,8 @@ const appRoutes: Routes = [
     GamePageComponent,
     UnityComponent,
     ControlPanelComponent,
-    VideoPlayerPageComponent
+    VideoPlayerPageComponent,
+    InitialPageComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,8 @@ const appRoutes: Routes = [
     VgOverlayPlayModule,
     VgBufferingModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

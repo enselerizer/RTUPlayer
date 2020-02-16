@@ -1,13 +1,8 @@
 <div class="container">
   <div class="blocks">
-    <app-video-list-block [title]="'Про Институт Информационных Технологий'" [video]="'video1'"></app-video-list-block>
-    <app-video-list-block [title]="'День Открытых Дверей 2018'" [video]="'video2'"></app-video-list-block>
-    <app-video-list-block [title]="'День Открытых дверей 2019'" [video]="'video3'"></app-video-list-block>
-    <app-video-list-block [title]="'Про Институт Информационных Технологий'" [video]="'video1'"></app-video-list-block>
-    <app-video-list-block [title]="'День Открытых Дверей 2018'" [video]="'video2'"></app-video-list-block>
-    <app-video-list-block [title]="'День Открытых дверей 2019'" [video]="'video3'"></app-video-list-block>
-    <app-video-list-block [title]="'Про Институт Информационных Технологий'" [video]="'video1'"></app-video-list-block>
-    <app-video-list-block [title]="'День Открытых Дверей 2018'" [video]="'video2'"></app-video-list-block>
-    <app-video-list-block [title]="'День Открытых дверей 2019'" [video]="'video3'"></app-video-list-block>
+
+      <app-video-list-block *ngFor="let item of configRef.videosPage.videos" [title]="item.title" [video]="item.video"></app-video-list-block>
+
+
   </div>
 </div>

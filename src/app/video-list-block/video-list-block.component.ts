@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VgAPI, VgEvents } from 'videogular2/compiled/core';
+import { ArchiveService } from '../archive.service';
 
 
 @Component({
@@ -12,14 +13,16 @@ export class VideoListBlockComponent implements OnInit {
 
   title: string;
   video: string;
+  configRef: any;
 
 
-  constructor() { }
+  constructor(private archive : ArchiveService) { }
   onPlayerReady(api: VgAPI) {
     api.volume = 0;
   }
 
   ngOnInit() {
+    this.configRef = this.archive.get();
   }
 
 }

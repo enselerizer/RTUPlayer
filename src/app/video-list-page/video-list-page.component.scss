@@ -7,8 +7,8 @@
 }
 
 .blocks > * {
-  width: calc(100% / 3);
-  height: calc(100% / 3);
+  width: calc(100% / var(--grid-size));
+  height: calc(100% / var(--grid-size));
 }
 .container {
   position: absolute;

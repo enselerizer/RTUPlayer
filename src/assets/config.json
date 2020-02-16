@@ -1,0 +1,40 @@
+{
+  "contentPath": "content/",
+  "videosPage": {
+    "gridSize": 3,
+    "basePath": "videos/",
+    "videos": [
+      {
+        "title": "День Открытых Дверей",
+        "video": "video1.mp4"
+      },
+      {
+        "title": "День Открытых Дверей",
+        "video": "video1.mp4"
+      },
+      {
+        "title": "День Открытых Дверей",
+        "video": "video1.mp4"
+      },
+      {
+        "title": "День Открытых Дверей",
+        "video": "video1.mp4"
+      },
+      {
+        "title": "День Открытых Дверей",
+        "video": "video1.mp4"
+      },
+      {
+        "title": "День Открытых Дверей",
+        "video": "video1.mp4"
+      }
+    ]
+  },
+  "mainPage": {
+    "videos": [
+      "video1.mp4",
+      "video2.mp4",
+      "video3.mp4"
+    ]
+  }
+}
