@@ -3,30 +3,33 @@
   "videosPage": {
     "gridSize": 3,
     "basePath": "videos/",
-    "videos": [
+    "items": [
       {
         "title": "День Открытых Дверей",
         "video": "video1.mp4"
-      },
+      }
+    ]
+  },
+  "newsPage": {
+    "gridSize": 3,
+    "basePath": "news/",
+    "items": [
       {
-        "title": "День Открытых Дверей",
-        "video": "video1.mp4"
-      },
+        "id": 1,
+        "title": "Новость 1",
+        "image": "img1.jpg"
+      }
+    ]
+  },
+  "gamesPage": {
+    "gridSize": 3,
+    "basePath": "games/",
+    "items": [
       {
-        "title": "День Открытых Дверей",
-        "video": "video1.mp4"
-      },
-      {
-        "title": "День Открытых Дверей",
-        "video": "video1.mp4"
-      },
-      {
-        "title": "День Открытых Дверей",
-        "video": "video1.mp4"
-      },
-      {
-        "title": "День Открытых Дверей",
-        "video": "video1.mp4"
+        "id": 1,
+        "title": "Поиск повторов",
+        "image": "game1.png",
+        "game": "game1"
       }
     ]
   },

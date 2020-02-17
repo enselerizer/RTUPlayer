@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="blocks">
+    <ng-container *ngIf="page==='news'">
+      <app-image-list-block *ngFor="let item of configRef.newsPage.items" [link]="['/reader', item.id]" [title]="item.title" [image]="configRef.newsPage.basePath + item.image"></app-image-list-block>
+    </ng-container>
+    <ng-container *ngIf="page==='games'">
+      <app-image-list-block *ngFor="let item of configRef.gamesPage.items" [link]="['/game', item.id]" [title]="item.title" [image]="configRef.gamesPage.basePath + item.image"></app-image-list-block>
+    </ng-container>
+  </div>
+</div>

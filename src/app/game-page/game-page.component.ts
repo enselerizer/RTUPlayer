@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { PlatformLocation } from '@angular/common';
 import { UnityCallbackProxyService } from '../unity-callback-proxy.service';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { ArchiveService } from '../archive.service';
 
 @Component({
   selector: 'app-game-page',
@@ -13,8 +15,9 @@ export class GamePageComponent implements OnInit {
   baseUrl: string;
   project: string;
   subscription: Subscription;
+  configRef: any;
 
-  constructor(platformLocation: PlatformLocation, private unityCallbackProxyService: UnityCallbackProxyService) {
+  constructor(platformLocation: PlatformLocation, private unityCallbackProxyService: UnityCallbackProxyService, private route: ActivatedRoute, private archive: ArchiveService) {
     const location = (platformLocation as any).location;
     this.baseUrl = location.origin + location.pathname.replace('index.html', '');
     console.log('baseUrl', this.baseUrl);
@@ -26,16 +29,21 @@ export class GamePageComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.configRef = this.archive.get();
     setTimeout(() => {
-      this.load('game1');
+      this.load(this.route.snapshot.params.id);
     }, 100);
-
-
   }
 
-  load(name: string) {
+  load(id: number) {
+    console.log(id);
+    let name = this.configRef.gamesPage.items.find(e => e.id === 1).game;
+
+
     this.project = name;
-    this.unityView.loadProject(`assets/games/${name}/game.json`);
+    this.unityView.loadProject(`assets/${this.configRef.contentPath + this.configRef.gamesPage.basePath + name}/game.json`);
+
+
   }
 
   send(objectName: string, methodName: string, messageValue: string) {

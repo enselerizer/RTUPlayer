@@ -21,12 +21,15 @@ import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { VideoPlayerPageComponent } from './video-player-page/video-player-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InitialPageComponent } from './initial-page/initial-page.component';
+import { ImageListPageComponent } from './image-list-page/image-list-page.component';
+import { ImageListBlockComponent } from './image-list-block/image-list-block.component';
 
 const appRoutes: Routes = [
   { path: '', component: InitialPageComponent, data: {state: 'initial'} },
   { path: 'main', component: MainPageComponent, data: {state: 'main'} },
   { path: 'video', component: VideoListPageComponent, data: {state: 'video'} },
-  { path: 'game', component: GamePageComponent, data: {state: 'game'} },
+  { path: 'list/:page', component: ImageListPageComponent, data: {state: 'news'} },
+  { path: 'game/:id', component: GamePageComponent, data: {state: 'game'} },
   { path: 'player/:video', component: VideoPlayerPageComponent, data: {state: 'player'} }
 ];
 
@@ -45,7 +48,9 @@ const appRoutes: Routes = [
     UnityComponent,
     ControlPanelComponent,
     VideoPlayerPageComponent,
-    InitialPageComponent
+    InitialPageComponent,
+    ImageListPageComponent,
+    ImageListBlockComponent
   ],
   imports: [
     BrowserModule,
