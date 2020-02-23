@@ -23,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { InitialPageComponent } from './initial-page/initial-page.component';
 import { ImageListPageComponent } from './image-list-page/image-list-page.component';
 import { ImageListBlockComponent } from './image-list-block/image-list-block.component';
+import { NewsReaderPageComponent } from './news-reader-page/news-reader-page.component';
 
 const appRoutes: Routes = [
   { path: '', component: InitialPageComponent, data: {state: 'initial'} },
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
   { path: 'video', component: VideoListPageComponent, data: {state: 'video'} },
   { path: 'list/:page', component: ImageListPageComponent, data: {state: 'news'} },
   { path: 'game/:id', component: GamePageComponent, data: {state: 'game'} },
-  { path: 'player/:video', component: VideoPlayerPageComponent, data: {state: 'player'} }
+  { path: 'player/:video', component: VideoPlayerPageComponent, data: {state: 'player'} },
+  { path: 'reader/:new', component: NewsReaderPageComponent, data: {state: 'reader'} }
 ];
 
 
@@ -50,7 +52,8 @@ const appRoutes: Routes = [
     VideoPlayerPageComponent,
     InitialPageComponent,
     ImageListPageComponent,
-    ImageListBlockComponent
+    ImageListBlockComponent,
+    NewsReaderPageComponent
   ],
   imports: [
     BrowserModule,

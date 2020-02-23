@@ -16,8 +16,14 @@ export class ImageListPageComponent implements OnInit {
 
   ngOnInit() {
     this.configRef = this.archive.get();
-    this._elementRef.nativeElement.style.setProperty('--grid-size', this.configRef.videosPage.gridSize);
     this.page = this.route.snapshot.params.page;
+    if(this.page == 'news') {
+      this._elementRef.nativeElement.style.setProperty('--grid-size', this.configRef.newsPage.gridSize);
+    }
+    if(this.page == 'games') {
+      this._elementRef.nativeElement.style.setProperty('--grid-size', this.configRef.gamesPage.gridSize);
+    }
+
   }
 
 }

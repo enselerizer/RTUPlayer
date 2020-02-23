@@ -11,7 +11,7 @@
     ]
   },
   "newsPage": {
-    "gridSize": 3,
+    "gridSize": 4,
     "basePath": "news/",
     "items": [
       {
@@ -22,21 +22,21 @@
     ]
   },
   "gamesPage": {
-    "gridSize": 3,
+    "gridSize": 2,
     "basePath": "games/",
     "items": [
       {
         "id": 1,
         "title": "Поиск повторов",
-        "image": "game1.png",
+        "image": "game1.jpg",
         "game": "game1"
       }
     ]
   },
   "mainPage": {
     "videos": [
-      "video1.mp4",
       "video2.mp4",
+      "video1.mp4",
       "video3.mp4"
     ]
   }
