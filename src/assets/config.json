@@ -99,6 +99,12 @@
         "title": "Поиск повторов",
         "image": "game1.jpg",
         "game": "game1"
+      },
+      {
+        "id": 2,
+        "title": "Поиск повторов v2",
+        "image": "game2.jpg",
+        "game": "game2"
       }
     ]
   },

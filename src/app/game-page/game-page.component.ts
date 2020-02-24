@@ -37,7 +37,7 @@ export class GamePageComponent implements OnInit {
 
   load(id: number) {
     console.log(id);
-    let name = this.configRef.gamesPage.items.find(e => e.id === 1).game;
+    let name = this.configRef.gamesPage.items.find(e => e.id == id).game;
 
 
     this.project = name;
