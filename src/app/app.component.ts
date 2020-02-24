@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { routerAnimations } from './animations';
+import { ArchiveService } from './archive.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +12,15 @@ import { routerAnimations } from './animations';
 
 export class AppComponent {
 
-  title = 'RTUPlayer';
+  title = 'RTUPlayer';s
+
+  constructor(private archive: ArchiveService, private router: Router) {}
+
+  ngOnInit() {
+    if(!ArchiveService.isConfigLoaded) {
+      this.router.navigateByUrl('/');
+    }
+  }
 
   getState(outlet) {
     return outlet.activatedRouteData.state;

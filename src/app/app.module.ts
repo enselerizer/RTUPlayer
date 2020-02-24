@@ -7,6 +7,7 @@ import {VgControlsModule} from 'videogular2/compiled/controls';
 import {VgOverlayPlayModule} from 'videogular2/compiled/overlay-play';
 import {VgBufferingModule} from 'videogular2/compiled/buffering';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
@@ -19,12 +20,20 @@ import { GamePageComponent } from './game-page/game-page.component';
 import { UnityComponent } from './unity/unity.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { VideoPlayerPageComponent } from './video-player-page/video-player-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InitialPageComponent } from './initial-page/initial-page.component';
+import { ImageListPageComponent } from './image-list-page/image-list-page.component';
+import { ImageListBlockComponent } from './image-list-block/image-list-block.component';
+import { NewsReaderPageComponent } from './news-reader-page/news-reader-page.component';
 
 const appRoutes: Routes = [
-  { path: '', component: MainPageComponent, data: {state: 'main'} },
+  { path: '', component: InitialPageComponent, data: {state: 'initial'} },
+  { path: 'main', component: MainPageComponent, data: {state: 'main'} },
   { path: 'video', component: VideoListPageComponent, data: {state: 'video'} },
-  { path: 'game', component: GamePageComponent, data: {state: 'game'} },
-  { path: 'player/:video', component: VideoPlayerPageComponent, data: {state: 'player'} }
+  { path: 'list/:page', component: ImageListPageComponent, data: {state: 'news'} },
+  { path: 'game/:id', component: GamePageComponent, data: {state: 'game'} },
+  { path: 'player/:video', component: VideoPlayerPageComponent, data: {state: 'player'} },
+  { path: 'reader/:id', component: NewsReaderPageComponent, data: {state: 'reader'} }
 ];
 
 
@@ -41,7 +50,11 @@ const appRoutes: Routes = [
     GamePageComponent,
     UnityComponent,
     ControlPanelComponent,
-    VideoPlayerPageComponent
+    VideoPlayerPageComponent,
+    InitialPageComponent,
+    ImageListPageComponent,
+    ImageListBlockComponent,
+    NewsReaderPageComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +64,9 @@ const appRoutes: Routes = [
     VgOverlayPlayModule,
     VgBufferingModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    NgScrollbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,7 +7,7 @@
           </div>
           <vg-player class="players" (onPlayerReady)="onPlayerReady($event)">
               <video class="player" [vgMedia]="media1" #media1 id="demoPlayer1" preload="auto" autoplay loop>
-                  <source src="assets/{{video}}.mp4" type="video/mp4">
+                  <source src="assets/{{ configRef.contentPath }}{{ configRef.videosPage.basePath }}{{ video }}" type="video/mp4">
               </video>
           </vg-player>
           <img src="assets/placeholder.png" class="content">

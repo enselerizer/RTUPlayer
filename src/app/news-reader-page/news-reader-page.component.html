@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="imageSpinner">
+    <div class="spinner">
+      <div class="item">
+        <img class="image" src="assets/{{ configRef.contentPath }}{{ configRef.newsPage.basePath }}{{ id }}/{{images[currentImage]}}" />
+        <img class="background" src="assets/{{ configRef.contentPath }}{{ configRef.newsPage.basePath }}{{ id }}/{{images[currentImage]}}" />
+      </div>
+    </div>
+    <div class="control-panel" *ngIf="images.length > 1">
+      <div (click)="prevImage()" class="button">&lt;</div>
+      <div (click)="nextImage()" class="button">&gt;</div>
+    </div>
+  </div>
+  <div class="reader">
+    <div class="inner">
+      <ng-scrollbar class="body">
+      <p class="header">{{ title }}
+        <br> <span class="date">{{ date }}</span>
+      </p>
+      <div class="test"></div>
+
+        <div [innerHTML]="body"></div>
+      </ng-scrollbar>
+    </div>
+  </div>

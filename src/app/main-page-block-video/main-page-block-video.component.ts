@@ -8,6 +8,7 @@ import {
   transition
 } from '@angular/animations';
 import { blockAnimations } from '../animations';
+import { ArchiveService } from '../archive.service';
 
 @Component({
   selector: 'app-main-page-block-video',
@@ -20,18 +21,19 @@ export class MainPageBlockVideoComponent implements OnInit {
 
   block = 'hide';
   link: string;
+  configRef: any;
+  videos: string[3];
 
-
-  constructor() { }
+  constructor(private archive : ArchiveService) { }
 
   onPlayerReady(api: VgAPI) {
     api.volume = 0;
   }
 
-
-
   ngOnInit() {
     this.block = 'show';
+    this.configRef = this.archive.get();
+    this.videos = this.configRef.mainPage.videos;
   }
 
 }
