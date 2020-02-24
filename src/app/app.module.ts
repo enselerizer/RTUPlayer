@@ -7,6 +7,7 @@ import {VgControlsModule} from 'videogular2/compiled/controls';
 import {VgOverlayPlayModule} from 'videogular2/compiled/overlay-play';
 import {VgBufferingModule} from 'videogular2/compiled/buffering';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
@@ -32,7 +33,7 @@ const appRoutes: Routes = [
   { path: 'list/:page', component: ImageListPageComponent, data: {state: 'news'} },
   { path: 'game/:id', component: GamePageComponent, data: {state: 'game'} },
   { path: 'player/:video', component: VideoPlayerPageComponent, data: {state: 'player'} },
-  { path: 'reader/:new', component: NewsReaderPageComponent, data: {state: 'reader'} }
+  { path: 'reader/:id', component: NewsReaderPageComponent, data: {state: 'reader'} }
 ];
 
 
@@ -64,7 +65,8 @@ const appRoutes: Routes = [
     VgBufferingModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    NgScrollbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

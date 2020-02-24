@@ -11,6 +11,7 @@ export class ImageListPageComponent implements OnInit {
 
   configRef: any;
   page: string;
+  id: number;
 
   constructor(private route: ActivatedRoute, private archive : ArchiveService, private _elementRef: ElementRef) { }
 

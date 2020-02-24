@@ -26,12 +26,12 @@ export const routerAnimations = [
 
         query(
           ":leave",
-          [animate("0.3s 100ms ease-in-out", style({ opacity: 0 }))],
+          [animate("0.2s 100ms ease-in-out", style({ opacity: 0 }))],
           { optional: true }
         ),
         query(
           ":enter",
-          [animate("0.3s  ease-in-out", style({ opacity: 1 }))],
+          [animate("0.2s  ease-in-out", style({ opacity: 1 }))],
           { optional: true }
         )
 
@@ -47,12 +47,12 @@ export const barButtonAnimations = [
 
         query(
           ":leave",
-          [animate("0.3s 100ms ease-in-out", style({ opacity: 0 }))],
+          [animate("0.2s 100ms ease-in-out", style({ opacity: 0 }))],
           { optional: true }
         ),
         query(
           ":enter",
-          [animate("0.3s  ease-in-out", style({ opacity: 1 }))],
+          [animate("0.2s  ease-in-out", style({ opacity: 1 }))],
           { optional: true }
         )
 
