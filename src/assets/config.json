@@ -96,15 +96,9 @@
     "items": [
       {
         "id": 1,
-        "title": "Поиск повторов",
+        "title": "Карточки",
         "image": "game1.jpg",
         "game": "game1"
-      },
-      {
-        "id": 2,
-        "title": "Поиск повторов v2",
-        "image": "game2.jpg",
-        "game": "game2"
       }
     ]
   },
