@@ -1,5 +1,7 @@
 # RTUPlayer
 
+![Demo Image](/demo-images/1.png?raw=true)
+
 An Angular based SPA for demo stands in Russian Technological University for internal use.
 
 
